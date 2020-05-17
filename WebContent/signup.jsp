@@ -16,20 +16,37 @@
   
   <div  class="container">
         <br/>
-  		<img src="img/signup.png"  style="height: 120px;">
+  		<img src="img/signup-2.png"  style="height: 160px;">
+  		 <h3>User Sign Up</h3>
   		 <hr/>
   		 
-  		 <form action="auth"  method="post">
-  		  <b>Username</b>
+  		 <form action="signup"  method="post">
+  		  Username<b>*</b>
   		   <input type="text"  name="username"  class="form-control"  style="width: 50%;">
   		   
-  		   <b>Password</b>
+  		   Password<b>*</b>
   		   <input type="password"  name="password"  class="form-control"  style="width: 50%;">
-  		    <br/>
-  		   <button type="submit" class="btn btn-primary">Sign In</button>
+  		    
+  		    Name<b>*</b>
+  		   <input type="text"  name="name"  class="form-control"  style="width: 50%;">
   		   
-  		     <a href="signup.jsp">
-  		     <button type="button" class="btn btn-danger">Sign Up</button>
+  		   
+  		    Email<b>*</b>
+  		   <input type="text"  name="email"  class="form-control"  style="width: 50%;">
+  		   
+  		      Salutation
+  		   <select  name="salutation"  class="form-control"  style="width: 50%;">
+  		        <option>Mr</option>
+  		        <option>Miss</option>
+  		   </select>
+  		   
+  		   
+  		   
+  		    <br/>
+  		   <button type="submit" class="btn btn-primary">Sign Up</button>
+  		   
+  		     <a href="login.jsp">
+  		     <button type="button" class="btn btn-danger">Sign In</button>
   		     </a>
   		   </form>
   </div>

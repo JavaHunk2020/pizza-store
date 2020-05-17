@@ -2,12 +2,18 @@ package com.domino;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.dao.query.SQLQuery;
+import com.utils.SQLConnectionUtils;
 
 ///PizzaServlet is servlet ??? yes
 
@@ -24,11 +30,34 @@ public class AuthServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		//below line is returning reference of Body of the response
 		PrintWriter pw=resp.getWriter();
-		
-		if("jack".equals(username) && "jill".equals(password)) {
-			req.getRequestDispatcher("success.jsp").forward(req, resp);
-		}else {
-			pw.println("<h1>Sorry,  your username and password are  not correct! </h1>");
+		boolean flag=false;
+		try {
+			Connection connection = SQLConnectionUtils.getConn();
+			// Compiling query and assigning into PreparedStatement object
+			PreparedStatement pstmt = connection.prepareStatement(SQLQuery.SELECT_SIGNUP_USERNAME_PASSWORD);
+			// setting the values inside PreparedStatement object
+			pstmt.setString(1, username);
+			pstmt.setString(2, password);
+			// Fire the query
+			ResultSet rs=pstmt.executeQuery();
+			//username,password,email,name,salutation,datecreated
+			if(rs.next()) {
+				flag=true;
+				String email=rs.getString(3);
+				String name=rs.getString(4);
+				String salutation=rs.getString(5);
+				//Setting values inside request scope
+				req.setAttribute("email", email);
+				req.setAttribute("name", name);
+				req.setAttribute("salutation", salutation);
+				
+				req.getRequestDispatcher("success.jsp").forward(req, resp);
+			}else {
+				pw.println("<h1>Sorry,  your username and password are  not correct! </h1>");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

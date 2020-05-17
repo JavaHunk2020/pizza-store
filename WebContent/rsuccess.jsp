@@ -16,13 +16,11 @@
   <div  class="container">
         <br/>
   		<img src="img/congrates.png"  style="height: 120px;">
-  		 <h1>You are a valid user and your details are</h1>
+  		 <h1>You are registered successfully!!!!!!!!!!!!</h1>
   		 <hr/>
-  		 Username :  ${param.username}
-  		 <br/>
-  		 Email :  ${email}<br/>
-  		 Name :  ${name}<br/>
-  		 Salutation :  ${salutation}
+  		  <a href="login.jsp">
+  		     <button type="button" class="btn btn-danger">Click to sign in</button>
+  		     </a>
   	</div>	
 </body>
 </html>
