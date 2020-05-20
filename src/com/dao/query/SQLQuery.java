@@ -10,5 +10,6 @@ public interface SQLQuery {
 	public static String INSERT_SIGNUP="insert into signup_tbl(username,password,email,name,salutation,datecreated) values(?,?,?,?,?,?)";
 	
 	public static String SELECT_SIGNUP_USERNAME_PASSWORD="select  username,password,email,name,salutation,datecreated from signup_tbl  where username  = ? and password=? ";
+	public static String SELECT_SIGNUPS="select sid,username,password,email,name,salutation,datecreated from signup_tbl";
 }
 

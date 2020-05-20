@@ -31,6 +31,10 @@
   		     <a href="signup.jsp">
   		     <button type="button" class="btn btn-danger">Sign Up</button>
   		     </a>
+  		     
+  		       <a href="users">
+  		     <button type="button" class="btn btn-danger">Users</button>
+  		     </a>
   		   </form>
   </div>
 
