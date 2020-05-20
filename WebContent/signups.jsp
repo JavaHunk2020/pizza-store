@@ -21,7 +21,7 @@
   		<img src="img/signup-2.png"  style="height: 160px;">
   		 <h3>User Sign List</h3>
   		 <hr/>
-  		 <table class="table table-striped">
+  		 <table class="table table-bordered">
     <thead>
       <tr>
         <th>Username</th>
@@ -29,6 +29,7 @@
         <th>Email</th>
         <th>Salutation</th>
         <th>Created Date</th>
+           <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -43,6 +44,15 @@
         <td><%=entity.getEmail() %></td>
           <td><%=entity.getSalutation() %></td>
             <td><%=entity.getDatecreated() %></td>
+            
+            <td>
+            <a href="deleteSignup?sid=<%=entity.getSid() %>">
+                   <img src="img/delete.png"  style="height: 40px;">
+            </a>
+            <a href="editSignup?sid=<%=entity.getSid() %>">
+                <img src="img/edit.png"  style="height: 40px;">
+               </a> 
+            </td>
       </tr>
      
     <% } %> 
