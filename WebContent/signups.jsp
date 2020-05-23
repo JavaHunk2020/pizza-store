@@ -21,6 +21,10 @@
   		<img src="img/signup-2.png"  style="height: 160px;">
   		 <h3>User Sign List</h3>
   		 <hr/>
+  		 <a href="logout"><img src="img/login.png"  style="height: 60px;"></a>
+  		 Current Role : - ${sessionScope.role}
+  		<span style="background-color: red;font-weight: bold;"> ${param.message}</span>
+  		<hr/>
   		 <table class="table table-bordered">
     <thead>
       <tr>

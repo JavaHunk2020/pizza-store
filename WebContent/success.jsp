@@ -11,6 +11,7 @@
 </head>
 <body>
    <header style="height: 30px;background-color: #2196f3;">
+      Hello ${sessionScope.salutation}                              =                          Email :  ${sessionScope.email}
   </header>
   
   <div  class="container">
@@ -23,6 +24,10 @@
   		 Email :  ${email}<br/>
   		 Name :  ${name}<br/>
   		 Salutation :  ${salutation}
+  		 <hr/>
+  		     <a href="users">
+  		     <button type="button" class="btn btn-danger">Users</button>
+  		     </a>
   	</div>	
 </body>
 </html>

@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dao.query.SQLQuery;
 import com.utils.SQLConnectionUtils;
@@ -50,6 +51,17 @@ public class AuthServlet extends HttpServlet {
 				req.setAttribute("email", email);
 				req.setAttribute("name", name);
 				req.setAttribute("salutation", salutation);
+				//Expiration -30 minutes
+				HttpSession session=req.getSession();
+				//session.setMaxInactiveInterval(60*5);
+				if("marry1000".equals(username)) {
+					session.setAttribute("role","admin");
+				}else {
+					session.setAttribute("role","customer");
+				}
+				session.setAttribute("name", name);
+				session.setAttribute("email", email);
+				session.setAttribute("salutation", salutation);
 				
 				req.getRequestDispatcher("success.jsp").forward(req, resp);
 			}else {
