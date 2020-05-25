@@ -10,6 +10,16 @@ public class SignupEntity {
 	private String name;
 	private String salutation;
 	private Timestamp datecreated;
+	private String role;
+	
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public int getSid() {
 		return sid;

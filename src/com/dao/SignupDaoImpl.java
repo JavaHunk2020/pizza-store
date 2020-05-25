@@ -56,10 +56,12 @@ public class SignupDaoImpl implements SignupDao {
 				String email = rs.getString(3);
 				String name = rs.getString(4);
 				String salutation = rs.getString(5);
+				String role = rs.getString(7);
 				// Setting values inside request scope
 				signupEntity.setEmail(email);
 				signupEntity.setName(name);
 				signupEntity.setSalutation(salutation);
+				signupEntity.setRole(role);
 			}
 
 		} catch (Exception e) {

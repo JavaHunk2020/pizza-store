@@ -11,7 +11,7 @@ public interface SQLQuery {
 	public static String UPDATE_SIGNUP_BY_SID="update signup_tbl set username=?,password=?,email=?,name=?,salutation=? where sid=?";
 	public static String DELETE_SIGNUP="delete from signup_tbl where sid=?";
 	
-	public static String SELECT_SIGNUP_USERNAME_PASSWORD="select  username,password,email,name,salutation,datecreated from signup_tbl  where username  = ? and password=? ";
+	public static String SELECT_SIGNUP_USERNAME_PASSWORD="select  username,password,email,name,salutation,datecreated,role from signup_tbl  where username  = ? and password=? ";
 	public static String SELECT_SIGNUPS="select sid,username,password,email,name,salutation,datecreated from signup_tbl";
 	public static String SELECT_SIGNUPS_SID="select sid,username,password,email,name,salutation,datecreated from signup_tbl where sid=?";
 }

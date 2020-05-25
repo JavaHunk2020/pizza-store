@@ -51,7 +51,7 @@
             
             <td>
             <a href="deleteSignup?sid=<%=entity.getSid() %>">
-                   <img src="img/delete.png"  style="height: 40px;">
+                   <img src="img/del.png"  style="height: 40px;">
             </a>
             <a href="editSignup?sid=<%=entity.getSid() %>">
                 <img src="img/edit.png"  style="height: 40px;">

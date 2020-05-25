@@ -37,12 +37,13 @@ public class AuthServlet extends HttpServlet {
 			req.setAttribute("salutation", signupEntity.getSalutation());
 			//Expiration -30 minutes
 			HttpSession session=req.getSession();
+			session.setAttribute("role",signupEntity.getRole());
 			//session.setMaxInactiveInterval(60*5);
-			if("marry1000".equals(username)) {
+			/*if("marry1000".equals(username)) {
 				session.setAttribute("role","admin");
 			}else {
 				session.setAttribute("role","customer");
-			}
+			}*/
 			session.setAttribute("name", signupEntity.getName());
 			session.setAttribute("email", signupEntity.getEmail());
 			session.setAttribute("salutation", signupEntity.getSalutation());
