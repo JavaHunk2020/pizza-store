@@ -37,7 +37,7 @@ public class BlockerFilter implements Filter {
 		String resoureName=httpServletRequest.getServletPath();
 		System.out.println("Accessing resoureName = "+resoureName+" at  "+LocalDateTime.now());
 		//GO Inside
-		if(allowedResources.contains(resoureName)) {
+		if(allowedResources.contains(resoureName)  || resoureName.contains("/img")) {
 			chain.doFilter(request, response);	
 		}else {
 			HttpSession httpSession=httpServletRequest.getSession(false);

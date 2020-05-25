@@ -15,6 +15,7 @@
   
   <div  class="container">
         <br/>
+        Total Logged in User : =  ${applicationScope.activeSessions}
   		<img src="img/congrates.png"  style="height: 120px;">
   		 <h1>You are registered successfully!!!!!!!!!!!!</h1>
   		 <hr/>

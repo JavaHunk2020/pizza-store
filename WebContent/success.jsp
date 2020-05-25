@@ -18,6 +18,7 @@
         <br/>
   		<img src="img/congrates.png"  style="height: 120px;">
   		 <h1>You are a valid user and your details are</h1>
+  		   Total Logged in User : =  ${applicationScope.activeSessions}
   		 <hr/>
   		 Username :  ${param.username}
   		 <br/>
