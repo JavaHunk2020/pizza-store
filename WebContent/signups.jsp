@@ -23,6 +23,16 @@
   		 <hr/>
   		 <a href="logout"><img src="img/login.png"  style="height: 60px;"></a>
   		 Current Role : - ${sessionScope.role}
+  		  <br/>
+  		   <hr/>
+  		 Username :  ${param.username}
+  		 <br/>
+  		 Email :  ${email}<br/>
+  		 Name :  ${name}<br/>
+  		 Salutation :  ${salutation}
+  		 <hr/>
+  		  Total Logged in User : =  <b>${applicationScope.activeSessions-1}</b>
+  		  <hr/>
   		<span style="background-color: red;font-weight: bold;"> ${param.message}</span>
   		<hr/>
   		 <table class="table table-bordered">

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSessionListener;
 @WebListener
 public class SessionCountListener implements HttpSessionListener {
 	
-	private final AtomicInteger sessionCount = new AtomicInteger();
+	private final AtomicInteger sessionCount = new AtomicInteger(0);
 	
 	@Override
 	public void sessionCreated(HttpSessionEvent se) {
